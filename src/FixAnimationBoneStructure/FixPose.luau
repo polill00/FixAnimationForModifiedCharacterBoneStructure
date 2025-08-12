@@ -102,7 +102,7 @@ local FixPose = function(OldPose, NewModelMap)
 	--| Generate RootPose
 	local NewPose = GeneratePoseRoot(OldPose)
 
-	--| Get list of parts in the bone
+	--| Get list of relevant parts from the pose
 	local RelevantParts = {}
 
 	for _, Object in ipairs(OldPose:GetDescendants()) do
