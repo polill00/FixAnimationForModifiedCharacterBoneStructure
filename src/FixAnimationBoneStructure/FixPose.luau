@@ -86,9 +86,6 @@ FixPoseRecursive = function(OldPose, NewPose, NewModelNode, NewParentHRPOffset)
 		* TotalOffset
 		* NewModelNode.Motor6D.C1
 
-	--local ObjectOffset = NewParentHRPOffset * NewModelNode.Motor6D.C0 * NewModelNode.Motor6D.C1:Inverse()
-	--local OffsetDifference = ObjectOffset:Inverse() * TotalOffset
-
 	--| Set the new pose's value
 	CopyPoseInfo(OldPose:FindFirstChild(NewPose.Name, true), NewPose)
 	NewPose.CFrame = OffsetDifference
